@@ -1,0 +1,67 @@
+#Para poder realizar los siguientes pasos debemos tener las herramientas correspondientes instaladas en nuesta computadora(Entorno linux):
+#composer
+#git
+
+#Primer paso, creamos un repositorio en Bitbucket.
+#Con nuestro usuario dentro de Bitbucket, vamos a crear repositorio.
+#Le damos un nombre.
+#Marcamos los checkbox de:
+#   Issue tracking
+#   Wiki
+#Y elegimos el lenguaje a utilizar:
+#   Language: PHP
+#Y creamos nuestro repositorio.
+
+#creación de estructura de proyecto para Drupal con Composer en entorno local.
+#Dentro de la carpeta donde guardamos nuestros proyectos, en mi caso la carpeta llamada Drupal, ejecutamos el siguiente comando:
+composer create-project drupal-composer/drupal-project:8.x-dev my_site_name_dir --stability dev --no-interaction
+#Esto creará una estructura de carpetas para nuestro proyecto. En dicha estructura se encuentra la carpeta llamada web donde realizaremos la instalación de drupal con drush.
+
+#instalación de Drupal con Drush (desde la carpeta web)
+#Antes de la instalación de drupal, debemos crear una base de datos. la cual se la asignaremos a la instalación.
+#cotejamiento DB: utf-8 general-ci
+#No olvides cambiar los datos para la base de datos(Ej:prueba), tu usuario(Ej:root) y tu password(Ej:root)
+../vendor/drush/drush/drush site-install --db-url="mysql://$DBUSER:$DBPWD@localhost/$DBNAME" --account-name=admin --account-pass=admin standard install_configure_form.update_status_module='array(FALSE,FALSE)' -y
+#Así quedaría una vez realizados los cambios:
+../vendor/drush/drush/drush site-install --db-url="mysql://root:root@localhost/prueba" --account-name=admin --account-pass=admin standard install_configure_form.update_status_module='array(FALSE,FALSE)' -y
+
+#terminada la instalación, podemos utlizar drupal console para ejecutar un servidor local provisional. Dentro de la carpeta de nuestro proyecto ejecutamos el siguiente comando:
+drupal server
+#introduciendo esta dirección en el navegador, ya podemos ver nuestro sitio.
+
+#Debemos realizar la importación de la configuración de nuestro proyecto con el comando (desde la carpeta web):
+../vendor/drush/drush/drush cex staging
+#Para la importación el comando sería el siguiente:
+../vendor/drush/drush/drush cim staging
+
+#Empezamos a crear nuestro repositorio local.
+#Inicializamos git con el siguiente comando(carpeta de proyecto):
+git init
+#Se crean la carpeta oculta .git y el archivo oculto .gitignore.
+#Con el comando:
+git status
+#Deberiamos ver los archivos en color rojo, puesto que todavía no los hemos añadido. Para agregarlos utilizamos el comando:
+git add .
+#también:
+git add -A
+#Es posible que tengas que identificarte ante el repositorio, lo haremos con los siguientes comandos:
+git config --global user.email "creativos5@prodigia.com"
+git config --global user.name "Cristina"
+#Ya podemos hacer nuestro primer commit con el comando:
+git commit -m "primer commit" (Añadimos a nuestro repositorio local)
+#Si utilizamos ahora el comando git status podremos ver que ahora no estan rojos, son los archivos que se añadirán al repositorio.
+# On branch master nothing to commit (working directory clean)
+
+#Enlazamos nuestro repositorio local con el de Bitbucket(remoto) con el siguiente comando:
+git remote add origin git@bitbucket.org:Dani2021/prueba.git
+#Es posible que tengamos que generar nuestras clave pública y privada de RSA necesarias para la comunicación con nuestros servidores. Utilizaremos el comando:
+ssh-keygen -t rsa
+#los archivos creados se ubicarán en una carpeta oculta dentro de nuestro usuario llamada .ssh
+#El archivo en el que se guardará la clave publica es id_rsa.pub.
+#Recuerda que en nuestro repositorio debemos crear una clave pública para nuestro usuario igual a la creada en nuestro entorno local.
+#Y subimos los archivos con:
+git push -u origin master
+
+
+#En el archivo settings.php que está en /sites/default debemos dar valor de False a la sentencia tal:
+#$Settings ["update_free_access"] = TRUE;
