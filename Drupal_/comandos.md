@@ -1,34 +1,35 @@
-<----------------------------------------------- GIT ----------------------------------------->
-#Crear commit
-    1.- Git status
-    2.- Git cex (sync) #Exportamos Primero la configuración
-    3.- Git status #Paso opcional
-    4.- Git add -A #con -A añadimos todos los archivos
-    5.- Git commit -m "nombredelcommmit"
+# GIT
+## Crear commit
+1. Git status
+2. Git cex (sync) #Exportamos Primero la configuración
+3. Git status #Paso opcional
+4. Git add -A #con -A añadimos todos los archivos
+5. Git commit -m "nombredelcommmit"
 
-#Push ---> [ git push origin master ]
+**Push** ---> [ `git push origin master` ]
 
-#Pull --> [ git pull ]
+**Pull** --> [ `git pull` ]
 
-#Crear Rama ---> [ git checkout -b nombre ]
+**Crear Rama** ---> [ `git checkout -b nombre` ]
 
 #Importar configuración ---> [ git cim (sync) ]
 
-<--------------------------------------------------------------------------------------------->
+--------------------------------------------------------------------------------------------
 
 
-<--------------------------------------------- DRUPAL 8 -------------------------------------->
-#Módulos
+## DRUPAL 8 
 
-    #Instalar módulos con drupal console: moi (module install) ---> [ drupal moi name ]
+###Módulos
 
-    #Desinstalar módulos con drupal console: mou (module uninstall) ---> [ drupal mou name ]
+* Instalar módulos con drupal console: moi (module install) ---> [ `drupal moi name` ]
 
-    #Instalar dependencias de módulos ---> [ composer require drupal/modulename ]
+* Desinstalar módulos con drupal console: mou (module uninstall) ---> [ `drupal mou name` ]
+
+* Instalar dependencias de módulos ---> [ `composer require drupal/modulename` ]
 
 #################################################################################################
 
-#Comandos de drupal Console (https://hechoendrupal.gitbooks.io/drupal-console/content/en/about/what-is-the-drupal-console.html)
+> Comandos de drupal Console ( [link](https://hechoendrupal.gitbooks.io/drupal-console/content/en/about/what-is-the-drupal-console.html) )
 
 #Activar modo mantenimiento (con drush) ---> [ drush sset system.maintenance_mode 1 ]
 
