@@ -19,7 +19,7 @@
 
 ## DRUPAL 8 
 
-###Módulos
+### Módulos
 
 * Instalar módulos con drupal console: moi (module install) ---> [ `drupal moi name` ]
 
@@ -27,27 +27,27 @@
 
 * Instalar dependencias de módulos ---> [ `composer require drupal/modulename` ]
 
-#################################################################################################
+----------------------------------------------------------------------------------------------
 
 > Comandos de drupal Console ( [link](https://hechoendrupal.gitbooks.io/drupal-console/content/en/about/what-is-the-drupal-console.html) )
 
-#Activar modo mantenimiento (con drush) ---> [ drush sset system.maintenance_mode 1 ]
+#Activar modo mantenimiento (con drush) ---> [ `drush sset system.maintenance_mode 1` ]
 
-#Desactivar modo mantenimiento (con drush) ---> [ drush sset system.maintenance_mode 0 ]
+#Desactivar modo mantenimiento (con drush) ---> [ `drush sset system.maintenance_mode 0` ]
 
-#Limpiar cache (con drush) ---> [ drush cr ]
+#Limpiar cache (con drush) ---> [ `drush cr` ]
 
-#Lista de actualizaciones disponibles (con drush) ---> [ drush ups ]
+#Lista de actualizaciones disponibles (con drush) ---> [ `drush ups` ]
 
-#Actualizar base de datos si lo necesita (con drush) ---> [ drush updb ]
+#Actualizar base de datos si lo necesita (con drush) ---> [ `drush updb` ]
 
-#Iniciar servidor local (con drupal console) ---> [ drupal server]
+#Iniciar servidor local (con drupal console) ---> [ `drupal server`]
 
-#Iniciar servidor local (con php) ---> [ php -S localhost:8080]  
+#Iniciar servidor local (con php) ---> [ `php -S localhost:8080`]  
 
-#Iniciar Compass Watch (cd web/themes/custom/socialfood/) ---> [ compass watch ]
+#Iniciar Compass Watch (cd web/themes/custom/socialfood/) ---> [ `compass watch` ]
 
-#Clases para nodos (https://lohmeyer.rocks/blog/2016/05/09/0076-adding-node-class-body-html-tag-drupal-8)
+#Clases para nodos ( [link](https://lohmeyer.rocks/blog/2016/05/09/0076-adding-node-class-body-html-tag-drupal-8) )
 
     
-<--------------------------------------------------------------------------------------------->
+---------------------------------------------------------------------------------------------
