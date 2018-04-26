@@ -47,7 +47,7 @@
 
 #Iniciar Compass Watch (cd web/themes/custom/socialfood/) ---> [ `compass watch` ]
 
-#Clases para nodos ( [link](https://lohmeyer.rocks/blog/2016/05/09/0076-adding-node-class-body-html-tag-drupal-8) )
+> Clases para nodos ( [link](https://lohmeyer.rocks/blog/2016/05/09/0076-adding-node-class-body-html-tag-drupal-8) )
 
     
 ---------------------------------------------------------------------------------------------
