@@ -1,7 +1,7 @@
 # GIT
 ## Crear commit
 1. Git status
-2. Git cex (sync) #Exportamos Primero la configuración
+2. Drush cex (sync) ### Exportamos Primero la configuración desde /web
 3. Git status #Paso opcional
 4. Git add -A #con -A añadimos todos los archivos
 5. Git commit -m "nombredelcommmit"
