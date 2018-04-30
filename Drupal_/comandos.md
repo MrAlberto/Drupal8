@@ -1,28 +1,3 @@
-# GIT
-## Crear commit
-> Exportamos Primero la configuración desde /web
-1. `git status`
-> Paso opcional, solo para comprobar los archivos de configuración exportados
-2. `Drush cex (sync)`
-3. `git status`
-> Con -A añadimos todos los archivos, podemos añadir los archivos uno por uno con `git add nombre`
-4. `git add -A`
-5. `git commit -m "nombredelcommmit"`
-
-**Push**
-`git push origin master`
-
-**Pull**`git pull`
-
-**Crear Rama**
-`git checkout -b nombre`
-
-**Importar configuración** 
-`drush cim (sync)`
-
----
-
-
 # DRUPAL 8 
 
 ## Módulos
@@ -87,4 +62,26 @@
    - $ composer update drupal/admin_toolbar
  - Eliminar un módulo:
    - $ composer remove drupal/admin_toolbar
-   
+# GIT
+## Crear commit
+> Exportamos Primero la configuración desde /web
+1. `git status`
+> Paso opcional, solo para comprobar los archivos de configuración exportados
+2. `Drush cex (sync)`
+3. `git status`
+> Con -A añadimos todos los archivos, podemos añadir los archivos uno por uno con `git add nombre`
+4. `git add -A`
+5. `git commit -m "nombredelcommmit"`
+
+**Push**
+`git push origin master`
+
+**Pull**`git pull`
+
+**Crear Rama**
+`git checkout -b nombre`
+
+**Importar configuración** 
+`drush cim (sync)`
+
+---
